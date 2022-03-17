@@ -15,7 +15,7 @@
 <br>
 <h1>Últimas Atualizações</h1>
 
-<p id="atualizacao">
+<p id="appatualizacao">
   - As imagens 5, 6 são capturadas automaticamente, não será necessário acessar o OrthoData para pegar as mesmas.<br>
   - Formulário mudou, agora está mais fácil a inserção de dados.<br>
   - Botão de "Usar Anterior" para reutilização dos dados inseridos anteriormente.<br>
@@ -26,7 +26,7 @@
 
 <h1>Versão atual:</h1>
 
-<h2 id="versao">1.0</h2>
+<h2 id="appversao">1.0</h2>
 
 
 
