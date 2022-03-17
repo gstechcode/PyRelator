@@ -1,5 +1,4 @@
 import json, os
-from Libs.Manager import Manager
 from Views import FormMain
 from Libs import Capture
 from Libs import Report14
@@ -10,7 +9,6 @@ from Libs import ConvertSTLs
 
 class PyRelator:
 	def __init__(self):
-		gerente= Manager()
 		formulario= FormMain.Execute()
 		banco= self.getBanco()
 		if(banco["relatorios1214"]):
