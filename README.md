@@ -19,7 +19,6 @@
   - As imagens 5, 6 são capturadas automaticamente, não será necessário acessar o OrthoData para pegar as mesmas.<br>
   - Formulário mudou, agora está mais fácil a inserção de dados.<br>
   - Botão de "Usar Anterior" para reutilização dos dados inseridos anteriormente.<br>
-  - Monitoramento de erros
 </p>
 
 <br>
