@@ -47,7 +47,7 @@ class Report12:
                 self.draw= ImageDraw.Draw(self.book)
                 self.cRect((0,0,self.width,int(340)),(31,91,141))
                 self.Textc("Resumo Setup Virtual",(255,255,255),["c",230], 60)
-                self.img(os.getcwd() + "\\Images\\OrthoAligner.png",-7,center= ["c",-60])
+                self.img(os.environ["USERPROFILE"] + "\\Documents\\PyRelator\\Images\\OrthoAligner.png",-7,center= ["c",-60])
                 texto= "O Setup Virtual para < {paciente} > foi planejado conforme suas instruções."
                 if("a" in self.comment):
                 	texto += " <break> <break> " + self.comment + " <break> "

@@ -305,7 +305,7 @@ class Report14(object):
                 self.infatt= 1
             else:
                 pass
-        file= open(os.getcwd() + "\\Cache\\FormMain.cache","r")
+        file= open(os.environ["USERPROFILE"] + "\\Documents\\PyRelator\\Cache\\FormMain.cache","r")
         db= json.loads(file.readlines()[0])
         if(self.supatt == 1):
             db["supatt"]= " + Attach"
@@ -316,7 +316,7 @@ class Report14(object):
         else:
             db["infatt"]= ""
         file.close()
-        file= open(os.getcwd() + "\\Cache\\FormMain.cache","w")
+        file= open(os.environ["USERPROFILE"] + "\\Documents\\PyRelator\\Cache\\FormMain.cache","w")
         file.write(json.dumps(db))
         file.close()
         texto= texto.format(comment= texto0,Paciente= self.paciente,sup=self.extenso(self.sup),inf=self.extenso(self.inf),v=self.vest,l=self.lin,o=self.ocl,att=self.extenso(str(self.att)),quant=int(self.sup) + int(self.inf) + self.att,extenso=self.extenso(int(self.sup) + int(self.inf) + self.att),pacote=self.pacote,ortodont=self.ortodont)

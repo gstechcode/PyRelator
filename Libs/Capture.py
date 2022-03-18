@@ -1,4 +1,9 @@
-from Resources import Res1600X900 as f
+k= Tk()
+width= k.winfo_screenwidth()
+height= k.winfo_screenheight()
+k.destroy()
+if(width == 1600 and height == 900):
+    from Resources import Res1600X900 as f
 import pyautogui as p
 import sys, shutil, os
 
