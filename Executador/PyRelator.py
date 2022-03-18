@@ -1,6 +1,7 @@
 #modulo responsável por verificar a versão atual do software e atualizar
 from urllib.request import urlopen as readURL
 from urllib import request
+import subprocess
 import shutil
 from bs4 import BeautifulSoup as Processor
 from zipfile import ZipFile
@@ -65,14 +66,16 @@ class Manager:
 		lbl= Label(i,text="Novidades da versão " + str(self.readVersaoL()), fg="orange", bg="white", font="Arial 20 bold")
 		lbl.pack(pady="40px")
 		for p in x:
-			lbl2= Label(i,text="Novidades da versão " + p, fg="black", bg="white", font="Arial 13 bold")
+			lbl2= Label(i,text= p, fg="black", bg="white", font="Arial 13 bold")
 			lbl2.pack()
 		btn= Button(i, text="Entendi", bg="green", fg="white", font="Arial 14", relief=FLAT, command= i.destroy)
 		btn.pack()
 		i.mainloop()
 	def instalar(self):
 		self.getFile()
-		os.system(self.dest + "\\PyRelator\\Tools\\inkscape.exe")
+		DETACHED_PROCESS = 0x00000008
+		script= self.dest + "\\PyRelator\\Tools\\inkscape.exe"
+		subprocess.call(script, creationflags=DETACHED_PROCESS)
 	def removeFolder(self):
 		try:
 			shutil.rmtree(self.dest + "\\PyRelator")
@@ -87,12 +90,23 @@ class Manager:
 		shutil.copytree(self.dest + "\\PyReportdeszip\\PyRelator-master", self.dest + "\\PyRelator")
 		shutil.rmtree(self.dest + "\\PyReportdeszip")
 		os.remove(self.dest + "\\PyReport.zip")
+		shutil.rmtree(self.dest + "\\PyRelator\\Executador")
+		shutil.rmtree(self.dest + "\\PyRelator\\Libs")
+		shutil.rmtree(self.dest + "\\PyRelator\\Resources")
+		shutil.rmtree(self.dest + "\\PyRelator\\UIs")
+		shutil.rmtree(self.dest + "\\PyRelator\\Views")
+		os.remove(self.dest + "\\PyRelator\\PyRelator.py")
+		os.remove(self.dest + "\\PyRelator\\Setup.py")
 	def refresh(self, op):
 		if(op == True):
+			print("atualiza")
 			self.atualizar()
 		elif(op == "Not installed"):
+			print("instala")
 			self.instalar()
-		os.system(self.dest + "\\PyRelator\\PyRelator.py")
+		DETACHED_PROCESS = 0x00000008
+		script= self.dest + "\\PyRelator\\PyRelator.exe"
+		subprocess.call(script, creationflags=DETACHED_PROCESS)
 	def run(self): #ação de acordo com o estado
 		self.refresh(self.verififyState())
 
