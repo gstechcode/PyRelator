@@ -4,6 +4,7 @@ from tkinter import *
 import zipfile, time, os, shutil
 from tkinter import ttk
 from datetime import date
+import subprocess
 
 class ConvertSTLs:
         def __init__(self, master):
@@ -44,7 +45,7 @@ class ConvertSTLs:
                 self.lbl["text"]= "Renomeando e convertendo STLs... 20%"
                 self.progress["value"]= 20
                 self.temp.update()
-                time.sleep(1)
+                time.sleep(2)
                 self.processSTL()
         def getSTL(self, model):
                 if(not(os.path.exists(f"{os.environ['USERPROFILE']}\\Documents\\PyRelator\\Convert"))):
