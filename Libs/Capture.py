@@ -1,3 +1,4 @@
+from tkinter import *
 k= Tk()
 width= k.winfo_screenwidth()
 height= k.winfo_screenheight()
