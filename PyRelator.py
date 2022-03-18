@@ -23,6 +23,6 @@ class PyRelator:
 		if(banco["otimizarstls"]):
 			stlot= ConvertSTLs.ConvertSTLs(banco)
 	def getBanco(self):
-		db= open(os.getcwd() + "\\Cache\\FormMain.cache","r")
+		db= open(os.environ["USERPROFILE"] + "\\Documents\\PyRelator\\Cache\\FormMain.cache","r")
 		return json.loads(db.readlines()[0])
 x= PyRelator()
