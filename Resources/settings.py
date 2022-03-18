@@ -22,7 +22,6 @@ class settings:
         t.sleep(1)
         if(op == "SIM"):
             p.click(1140,73)
-            self.ortho[0].activate()
             p.click(486,12)
             t.sleep(1)
             if(arcs == "Superior" or arcs == "Ambas"):
