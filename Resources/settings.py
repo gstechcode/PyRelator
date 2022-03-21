@@ -27,7 +27,7 @@ class settings:
             if(arcs == "Superior" or arcs == "Ambas"):
                 p.click(1140,73)
                 t.sleep(2)
-                p.screenshot(region=(253,50,871,370)).save(path + "09 - Estagiamento " + str(self.master["sup"]) + "Superior - " + self.master["setup"] + ".png")
+                p.screenshot(region=(253,50,871,370)).save(path + "09 - Estagiamento " + str(self.master["sup"]) + " Superior - " + self.master["setup"] + ".png")
             if(arcs == "Inferior" or arcs == "Ambas"):
                 p.click(1141,359)
                 p.click(486,12)

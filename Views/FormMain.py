@@ -373,6 +373,7 @@ class Ui_MainWindow(object):
         self.pacote.setItemText(11, _translate("MainWindow", "Refino IV"))
         self.pacote.setItemText(12, _translate("MainWindow", "Refino V"))
         self.pacote.setItemText(13, _translate("MainWindow", "Refino VI"))
+        self.pacote.setItemText(14, _translate("MainWindow", " "))
         self.comentario.setPlaceholderText(_translate("MainWindow", "Comentário"))
         self.prazo.setPlaceholderText(_translate("MainWindow", "Prazo"))
         self.diagnostico.setText(_translate("MainWindow", "Diagnóstico"))
@@ -382,7 +383,7 @@ class Ui_MainWindow(object):
         self.ortodontista.setItemText(1, _translate("MainWindow", "Diogo Frazão"))
         self.ortodontista.setItemText(2, _translate("MainWindow", "Luisa Thayrine"))
         self.ortodontista.setItemText(3, _translate("MainWindow", "Alessandra Raid"))
-        self.ortodontista.setItemText(4, _translate("MainWindow", "Bruno Frazão"))
+        self.ortodontista.setItemText(4, _translate("MainWindow", "Bruno Gribel"))
         self.ortodontista.setItemText(5, _translate("MainWindow", "Cassia dos Anjos"))
         self.ortodontista.setItemText(6, _translate("MainWindow", "Marcos Gribel"))
         self.dentista.setPlaceholderText(_translate("MainWindow", "Nome do Dentista"))
@@ -472,6 +473,7 @@ class Ui_MainWindow(object):
         self.db["setup"]= self.db["path"].split("\\")[len(self.db["path"].split("\\"))-1]
         self.db["os"]= self.OS.text()
     def Setup(self):
+        print(self.paciente.text())
         self.db["paciente"] = unidecode(self.paciente.text().title())
         self.db["path"]= self.path.text()
         self.db["dentista"] = unidecode(self.dentista.text().title())

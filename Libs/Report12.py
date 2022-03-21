@@ -154,7 +154,7 @@ class Report12:
         						print(cont, cursor)
         						cont= cont + cursor[0] + 10
         def Textc(self,txt,color,c,tam):
-                fonte= ImageFont.truetype("C:\\Program Files\\PyReport-1600X900\\build\\exe.win-amd64-3.9\\fonts\\Arial.ttf",tam)
+                fonte= ImageFont.truetype(os.environ["USERPROFILE"] + "\\Documents\\PyRelator\\Fonts\\Arial.ttf",tam)
                 if("c" in c):
                 	x= self.draw.textlength(txt, font= fonte)
                 	self.draw.text((int((self.width-x)/2),c[1]),txt,fill=color,font=fonte)

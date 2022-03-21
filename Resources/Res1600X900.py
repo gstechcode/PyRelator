@@ -128,7 +128,7 @@ class functions(s.settings):
             win32gui.LineTo(dc,1600,710)
             aux += 1
             print(aux)
-            if(aux == 120):
+            if(aux == 60):
                 break
         t.sleep(3)
         self.Photo("Vista Oclusao Anterior")
