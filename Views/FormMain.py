@@ -373,7 +373,7 @@ class Ui_MainWindow(object):
         self.pacote.setItemText(11, _translate("MainWindow", "Refino IV"))
         self.pacote.setItemText(12, _translate("MainWindow", "Refino V"))
         self.pacote.setItemText(13, _translate("MainWindow", "Refino VI"))
-        self.pacote.setItemText(14, _translate("MainWindow", " "))
+        self.pacote.setItemText(14, _translate("MainWindow", "Não tem"))
         self.comentario.setPlaceholderText(_translate("MainWindow", "Comentário"))
         self.prazo.setPlaceholderText(_translate("MainWindow", "Prazo"))
         self.diagnostico.setText(_translate("MainWindow", "Diagnóstico"))
@@ -492,6 +492,8 @@ class Ui_MainWindow(object):
         else:
             self.db["inf"]= "0"
         self.db["pacote"]= str(self.pacote.currentText())
+        if(self.db["pacote"] == "Não tem"):
+            self.db["pacote"]= " "
         self.db["setup"]= self.db["path"].split("\\")[len(self.db["path"].split("\\"))-1]
         self.db["os"]= self.OS.text()
 class Execute:

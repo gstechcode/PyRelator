@@ -144,4 +144,4 @@ class CoreMovie:
                 self.update()
                 gifsicle= os.environ["USERPROFILE"] + "\\Documents\\PyRelator\\Tools\\gifsicle.exe"
                 DETACHED_PROCESS = 0x00000008
-                subprocess.call(f'"{gifsicle}" -i "{self.name}" -O3 --colors 256 -o "{self.name}"')
+                subprocess.call(f'"{gifsicle}" -i "{self.name}" -O3 --colors 256 -o "{self.name}"', creationflags=DETACHED_PROCESS)
