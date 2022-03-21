@@ -6,7 +6,7 @@ k.destroy()
 if(width == 1600 and height == 900):
     from Resources import Res1600X900 as f
 elif(width == 1366 and height == 768):
-    from Resources import Res1366X768
+    from Resources import Res1366X768 as f
 import pyautogui as p
 import sys, shutil, os
 
