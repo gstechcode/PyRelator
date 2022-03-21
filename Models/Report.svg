@@ -149,6 +149,28 @@
          x="41.754642"
          y="662.62073" />
     </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath1032">
+      <rect
+         style="fill:#fafcfe;fill-opacity:1;stroke:#000000;stroke-width:0.569"
+         id="rect1034"
+         width="550.63049"
+         height="178.77667"
+         x="19.720625"
+         y="159.47989" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath1261">
+      <rect
+         style="fill:#fafcfe;fill-opacity:1;stroke:#000000;stroke-width:0.569"
+         id="rect1263"
+         width="550.92139"
+         height="186.45718"
+         x="17.943001"
+         y="645.19781" />
+    </clipPath>
   </defs>
   <sodipodi:namedview
      id="namedview1356"
@@ -159,9 +181,9 @@
      inkscape:pageopacity="0.0"
      inkscape:pagecheckerboard="0"
      showgrid="false"
-     inkscape:zoom="0.42501839"
-     inkscape:cx="290.57566"
-     inkscape:cy="168.22801"
+     inkscape:zoom="0.96459612"
+     inkscape:cx="129.06956"
+     inkscape:cy="338.48364"
      inkscape:window-width="1600"
      inkscape:window-height="829"
      inkscape:window-x="-8"
@@ -662,9 +684,9 @@
      xml:space="preserve"><tspan
        x="17.598301"
        y="107.9952"
-       id="tspan161979"><tspan
+       id="tspan1695"><tspan
          style="font-size:14.5px;font-family:Calibri;fill:#1b1918"
-         id="tspan161977">Nº OS: {OS}</tspan></tspan></text>
+         id="tspan1693">Nº OS: {OS}</tspan></tspan></text>
   <text
      x="17.598301"
      y="125.9484"
@@ -1394,44 +1416,39 @@
        x="17.989529"
        y="143.88483">Dentista responsável: {DENTISTA}</tspan></text>
   <rect
-     style="fill:#fafcfe;fill-opacity:1;stroke:#000000;stroke-width:0.569"
+     style="fill:#e6e6e6;fill-opacity:1;stroke:#000000;stroke-width:0.569"
      id="rect161141"
      width="550.63049"
      height="178.77667"
      x="19.720625"
      y="159.47989" />
   <image
-     width="461.603"
-     height="217.05508"
+     width="312.65042"
+     height="206.74164"
      preserveAspectRatio="none"
-     style="stroke-width:2.41984;image-rendering:optimizeQuality"
+     style="stroke-width:3.30397;image-rendering:optimizeQuality"
      xlink:href="{Superior}"
-     id="image1057"
-     x="64.08387"
-     y="154.8508"
-     clip-path="url(#clipPath161115)"
-     transform="matrix(1.1229309,0,0,1.0709969,-36.237714,-12.062357)"
-     inkscape:export-filename="C:\Users\gabriel.azevedo\Desktop\image1057.png"
-     inkscape:export-xdpi="300"
-     inkscape:export-ydpi="300"
+     id="image987"
+     x="131.66882"
+     y="153.94708"
+     clip-path="url(#clipPath1032)"
      inkscape:label="Superior" />
   <rect
-     style="fill:#fafcfe;fill-opacity:1;stroke:#000000;stroke-width:0.569"
+     style="fill:#e6e6e6;fill-opacity:1;stroke:#000000;stroke-width:0.569"
      id="rect161249"
      width="550.92139"
      height="186.45718"
-     x="17.943001"
+     x="17.942993"
      y="645.19781" />
   <image
-     width="433.91306"
-     height="208.33849"
+     width="285.33203"
+     height="209.63168"
      preserveAspectRatio="none"
-     style="stroke-width:2.47723;image-rendering:optimizeQuality"
+     style="stroke-width:3.43459;image-rendering:optimizeQuality"
      xlink:href="{Inferior}"
-     id="image76806"
-     x="83.579201"
-     y="616.67963"
-     clip-path="url(#clipPath161223)"
-     transform="matrix(1.1308072,0,0,1.1247814,-42.68189,-98.488864)"
+     id="image1248"
+     x="151.55814"
+     y="622.55579"
+     clip-path="url(#clipPath1261)"
      inkscape:label="Inferior" />
 </svg>
