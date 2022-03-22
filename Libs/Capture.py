@@ -43,6 +43,8 @@ class CaptureView(f.functions):
                 self.estCapt("SIM","Superior")
             elif(self.master["sup"] != "0" and self.master["inf"] != "0"):
                 self.estCapt("SIM","Ambas")
+            elif(self.master["diagnostico"] == True):
+                self.estCapt("SIM","Ambas")
             else:
                 self.estCapt("SIM","Tabela")
             repeatEst= p.confirm(title="Quer repetir o estagiamento?", text="", buttons=["SIM","NAO"])
@@ -50,6 +52,8 @@ class CaptureView(f.functions):
                 break
             else:
                 p.click(1134,14)
-        shutil.copy(os.environ["USERPROFILE"] + "\\Documents\\PyRelator\\Images\\tmp\\5.png", self.master["path"] + "\\05 - Sobreposicao " + self.master["setup"] + " Superior - " + self.master["paciente"] + ".png")
-        shutil.copy(os.environ["USERPROFILE"] + "\\Documents\\PyRelator\\Images\\tmp\\6.png", self.master["path"] + "\\06 - Sobreposicao " + self.master["setup"] + " Inferior - " + self.master["paciente"] + ".png")
+        if(self.master["sup"] != "0"):
+            shutil.copy(os.environ["USERPROFILE"] + "\\Documents\\PyRelator\\Images\\tmp\\5.png", self.master["path"] + "\\05 - Sobreposicao " + self.master["setup"] + " Superior - " + self.master["paciente"] + ".png")
+        if(self.master["inf"] != "0"):
+            shutil.copy(os.environ["USERPROFILE"] + "\\Documents\\PyRelator\\Images\\tmp\\6.png", self.master["path"] + "\\06 - Sobreposicao " + self.master["setup"] + " Inferior - " + self.master["paciente"] + ".png")
 

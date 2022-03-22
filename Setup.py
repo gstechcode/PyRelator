@@ -16,5 +16,5 @@ setup(
     version="1.0",
     description="PyRelator",
     options={"build_exe": build_exe_options},
-    executables=[Executable("PyRelator.py", base=base, icon=r"C:\Users\gabriel.azevedo\Desktop\PyRelator\Images\Icon.ico")],
+    executables=[Executable("PyRelator.py", base=base, icon=r"C:\Users\gabriel.azevedo\Desktop\Projects\PyRelator Git\PyRelator\Images\Icon.ico")],
 )

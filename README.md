@@ -16,7 +16,8 @@
 <h1>Últimas Atualizações</h1>
 
 <p id="appatualizacao">
-  - Adição do Pacote Refino I <br>
+  - Correção Diagnostico <br>
+  - Correção Imagem 5 e 6 quando não tem <br>
 </p>
 
 <br>
