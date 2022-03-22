@@ -16,17 +16,14 @@
 <h1>Últimas Atualizações</h1>
 
 <p id="appatualizacao">
-  - As imagens 5, 6 são capturadas automaticamente, não será necessário acessar o OrthoData para pegar as mesmas.<br>
-  - Formulário mudou, agora está mais fácil a inserção de dados.<br>
-  - Botão de "Usar Anterior" para reutilização dos dados inseridos anteriormente.<br>
-  - Monitoramento de erros
+  - Adição do Pacote Refino I <br>
 </p>
 
 <br>
 
 <h1>Versão atual:</h1>
 
-<h2 id="appversao">1.1</h2>
+<h2 id="appversao">1.2</h2>
 
 
 
