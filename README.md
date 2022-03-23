@@ -25,7 +25,7 @@
 
 <h1>Versão atual:</h1>
 
-<h2 id="appversao">1.2</h2>
+<h2 id="appversao">1.4</h2>
 
 
 
