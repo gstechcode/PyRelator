@@ -291,24 +291,19 @@ class Report14(object):
         arcinf= ["31","32","33","34","35","36","37","41","42","43","44","45","46","47"]
         self.supatt= 0
         self.infatt= 0
-        for i in arcsup:
-            if(i in self.vest or i in self.lin or i in self.ocl):
-                self.att = 1
+        for k in arcsup:
+            if(k in self.vest or k in self.lin or k in self.ocl):
                 self.supatt= 1
         for i in arcinf:
             if(i in self.vest or i in self.lin or i in self.ocl and self.att == 1):
-                self.att= 2
-                self.supatt= 1
                 self.infatt= 1
-            elif(i in self.vest or i in self.lin or i in self.ocl and self.att == 0):
-                self.att= 1
-                self.infatt= 1
-            else:
-                pass
-        if(self.sup == "0" and self.supatt == 1):
+                
+        if(self.sup == "0"):
             self.supatt = 0
-        elif(self.inf == "0" and self.infatt == 1):
+        elif(self.inf == "0"):
             self.infatt= 0
+
+        self.att= self.supatt + self.infatt
         with open(os.environ["USERPROFILE"] + "\\Documents\\PyRelator\\Cache\\FormMain.cache","r") as file:
             db= json.loads(file.read())
             if(self.supatt == 1):

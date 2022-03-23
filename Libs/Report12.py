@@ -91,11 +91,12 @@ class Report12:
                 self.supp= sup
                 self.inff= inf
                 self.att= 0
-                if(self.supatt != ""):
+                if(self.supattt != ""):
                         self.att += 1
-                if(self.infatt != ""):
+                if(self.infattt != ""):
                         self.att += 1
-                texto= texto.format(paciente=self.paciente,sup=str(sup) + self.supatt,inf=str(inf) + self.infatt,total=int(self.sup) + int(self.inf) + int(self.att), extenso=self.extenso(str(int(self.sup) + int(self.inf) + int(self.att))),pacote= self.pacote)
+
+                texto= texto.format(paciente=self.paciente,sup=str(sup) + self.supattt,inf=str(inf) + self.infattt,total=int(self.sup) + int(self.inf) + int(self.att), extenso=self.extenso(str(int(self.sup) + int(self.inf) + int(self.att))),pacote= self.pacote)
                 self.Paragraph(texto)
                 self.cRect((0,height-100,width,height),bg=(31,91,141))
                 self.Textc("Consulte as informações completas na Ficha de Instruções",(255,255,255),["c",height-70], 40)
@@ -111,6 +112,7 @@ class Report12:
                 while True:
                         try:
                                 test= self.openDB()["supatt"]
+                                test= self.openDB()["infatt"]
                                 self.database= self.openDB()
                                 return 0
                         except Exception:
@@ -118,8 +120,8 @@ class Report12:
         def translateVars(self):
                 self.ControlTime()
                 self.tsetup= self.database["setup"]
-                self.supatt= self.database["supatt"]
-                self.infatt= self.database["infatt"]
+                self.supattt= self.database["supatt"]
+                self.infattt= self.database["infatt"]
                 self.infatt= ""
                 self.paciente= self.database["paciente"]
                 self.dentista= self.database["dentista"]
