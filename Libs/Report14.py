@@ -305,20 +305,22 @@ class Report14(object):
                 self.infatt= 1
             else:
                 pass
-        file= open(os.environ["USERPROFILE"] + "\\Documents\\PyRelator\\Cache\\FormMain.cache","r")
-        db= json.loads(file.readlines()[0])
-        if(self.supatt == 1):
-            db["supatt"]= " + Attach"
-        else:
-            db["supatt"]= ""
-        if(self.infatt == 1):
-            db["infatt"]= " + Attach"
-        else:
-            db["infatt"]= ""
-        file.close()
-        file= open(os.environ["USERPROFILE"] + "\\Documents\\PyRelator\\Cache\\FormMain.cache","w")
-        file.write(json.dumps(db))
-        file.close()
+        if(self.sup == "0" and self.supatt == 1):
+            self.supatt = 0
+        elif(self.inf == "0" and self.infatt == 1):
+            self.infatt= 0
+        with open(os.environ["USERPROFILE"] + "\\Documents\\PyRelator\\Cache\\FormMain.cache","r") as file:
+            db= json.loads(file.read())
+            if(self.supatt == 1):
+                db["supatt"]= " + Attach"
+            else:
+                db["supatt"]= ""
+            if(self.infatt == 1):
+                db["infatt"]= " + Attach"
+            else:
+                db["infatt"]= ""
+        with open(os.environ["USERPROFILE"] + "\\Documents\\PyRelator\\Cache\\FormMain.cache","w") as file:
+            file.write(json.dumps(db))
         texto= texto.format(comment= texto0,Paciente= self.paciente,sup=self.extenso(self.sup),inf=self.extenso(self.inf),v=self.vest,l=self.lin,o=self.ocl,att=self.extenso(str(self.att)),quant=int(self.sup) + int(self.inf) + self.att,extenso=self.extenso(int(self.sup) + int(self.inf) + self.att),pacote=self.pacote,ortodont=self.ortodont)
         self.bl2.setTextOrigin(int(x),int(y))
         self.coords = [0,0,0,0]

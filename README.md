@@ -18,6 +18,7 @@
 <p id="appatualizacao">
   - Correção Diagnostico <br>
   - Correção Imagem 5 e 6 quando não tem <br>
+  - Correção Bug 12 <br>
 </p>
 
 <br>

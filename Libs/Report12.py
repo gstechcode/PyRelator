@@ -10,6 +10,7 @@ import subprocess
 import tkinter as tt
 from tkinter import ttk
 from tkinter import Tk, Text, Button, END, Label
+import json
 import sys
 
 class Report12:
@@ -101,16 +102,25 @@ class Report12:
                 self.book.save(self.path + f"\\12 - Resumo de {self.tsetup} - {self.paciente}.png")
         def cRect(self,coords,bg):
                 self.draw.rectangle(coords,fill=bg)
+        def openDB(self):
+                file= open(os.environ["USERPROFILE"] + "\\Documents\\PyRelator\\Cache\\FormMain.cache","r")
+                arq= file.readlines()[0]
+                file.close()
+                return json.loads(arq)
+        def ControlTime(self):
+                while True:
+                        try:
+                                test= self.openDB()["supatt"]
+                                self.database= self.openDB()
+                                return 0
+                        except Exception:
+                                pass
         def translateVars(self):
+                self.ControlTime()
                 self.tsetup= self.database["setup"]
-                try:
-                        self.supatt= self.database["supatt"]
-                except KeyError:
-                        self.supatt= ""
-                try:
-                        self.infatt= self.database["infatt"]
-                except KeyError:
-                        self.infatt= ""
+                self.supatt= self.database["supatt"]
+                self.infatt= self.database["infatt"]
+                self.infatt= ""
                 self.paciente= self.database["paciente"]
                 self.dentista= self.database["dentista"]
                 self.sup= self.database["sup"]

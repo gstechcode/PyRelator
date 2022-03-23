@@ -14,6 +14,7 @@ class PyRelator:
 		if(banco["relatorios1214"]):
 			report14= Report14.Report14(banco)
 			report12= Report12.Report12(banco)
+			report12= Report12.Report12(banco)
 		if(banco["capturas"]):
 			capturas= Capture.CaptureView(banco)
 		if(banco["relatorioipr"]):
@@ -21,7 +22,7 @@ class PyRelator:
 		if(banco["otimizargifs"]):
 			gifot= ConvGIF.ConvGIF(banco)
 		if(banco["otimizarstls"]):
-			stlot= ConvertSTLs.ConvertSTLs(banco)
+			stGabriellot= ConvertSTLs.ConvertSTLs(banco)
 	def getBanco(self):
 		db= open(os.environ["USERPROFILE"] + "\\Documents\\PyRelator\\Cache\\FormMain.cache","r")
 		return json.loads(db.readlines()[0])
