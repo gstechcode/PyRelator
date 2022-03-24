@@ -16,14 +16,14 @@
 <h1>Últimas Atualizações</h1>
 
 <p id="appatualizacao">
-  - Correção Bug relatório 12 e 14 <br>
+  - Controle de atualizações com Monitor <br>
 </p>
 
 <br>
 
 <h1>Versão atual:</h1>
 
-<h2 id="appversao">1.5</h2>
+<h2 id="appversao">2.0</h2>
 
 
 
