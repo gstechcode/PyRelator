@@ -187,7 +187,7 @@ class functions(s.settings):
                 win32gui.LineTo(dc,1280,900)
                 aux += 1
                 print(aux)
-                if(aux == 120):
+                if(aux == 60):
                     break
             t.sleep(4)
             self.Photo("Vista Oclusal Superior")
@@ -224,7 +224,7 @@ class functions(s.settings):
                 win32gui.LineTo(dc,1280,900)
                 aux += 1
                 print(aux)
-                if(aux == 120):
+                if(aux == 60):
                     break
             t.sleep(4)
             self.Photo("Vista Oclusal Inferior")

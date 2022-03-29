@@ -27,23 +27,23 @@ class CaptureView(f.functions):
             op= p.confirm(title="Deu tudo certo?", text="", buttons=["Sim","Não"])
             if(op == "Sim"):
                 break
-        if(self.master["sup"] != "0"):
+        if(self.master["sup"] != "0" or self.master["diagnostico"] == True):
             self.captOclSup("sup")
             self.captOclSup("sob")
             self.captOclSup("ipr")
-        if(self.master["inf"] != "0"):
+        if(self.master["inf"] != "0" or self.master["diagnostico"] == True):
             self.captOclInf("inf")
             self.captOclInf("sob")
             self.captOclInf("ipr")
         p.confirm(title="Pronto para o estagiamento?", text="", buttons=["Pronto"])
         while 1:
-            if(self.master["sup"] == "0" and self.master["inf"] != "0"):
+            if(self.master["diagnostico"] == True):
+                self.estCapt("SIM","Ambas")
+            elif(self.master["sup"] == "0" and self.master["inf"] != "0"):
                 self.estCapt("SIM","Inferior")
             elif(self.master["sup"] != "0" and self.master["inf"] == "0"):
                 self.estCapt("SIM","Superior")
             elif(self.master["sup"] != "0" and self.master["inf"] != "0"):
-                self.estCapt("SIM","Ambas")
-            elif(self.master["diagnostico"] == True):
                 self.estCapt("SIM","Ambas")
             else:
                 self.estCapt("SIM","Tabela")

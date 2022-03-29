@@ -16,14 +16,16 @@
 <h1>Últimas Atualizações</h1>
 
 <p id="appatualizacao">
-  - Adição de pacote KIDS <br>
+  - Adição de pacote 2 PRO <br>
+  - Redução do tempo de ajuste posição oclusal superior/inferior <br>
+  - Correção Diagnostico(Fotos arcadas superior/inferior)<br>
 </p>
 
 <br>
 
 <h1>Versão atual:</h1>
 
-<h2 id="appversao">2.1</h2>
+<h2 id="appversao">2.2</h2>
 
 
 
