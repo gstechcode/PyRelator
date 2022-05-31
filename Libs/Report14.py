@@ -250,7 +250,7 @@ class Report14(object):
         if(self.validade != ""):
             self.validade= self.validade.replace("\n","")
             texto= texto + "<" + self.validade + ">|"
-        texto= texto + "|Você poderá escolher o tipo de placa utilizada para o tratamento entre <Ultimate> e <FLX>.|As placas <Ultimate> são mais finas, mais confortáveis e mais resistentes a manchas.|As placas <FLX> possuem maior resistência, flexibilidade e forças mais constantes||."
+        texto= texto + "|A placa utilizada para o tratamento será <AL+> de 0,6mm que reúne performance e resistência para os melhores resultados.||"
         texto= texto + "Além disso, você também pode optar pelo <recorte padrão> (corte reto, 2mm acima da margem gengival) ou <recorte cervical> com contorno gengival.||"
         texto= texto + "Lembrando que a escolha das placas e do recorte deve ser baseada na experiência do profissional e em especial no caso a ser tratado.||"
         texto= texto + "<Verifique com o seu consultor com relação aos custos do pacote indicado, placas e recorte escolhido.>||£"

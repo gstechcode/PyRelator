@@ -52,6 +52,8 @@ class CaptureView(f.functions):
                 break
             else:
                 p.click(1134,14)
-        shutil.copy(os.environ["USERPROFILE"] + "\\Documents\\PyRelator\\Images\\tmp\\5.png", self.master["path"] + "\\05 - Sobreposicao " + self.master["setup"] + " Superior - " + self.master["paciente"] + ".png")
-        shutil.copy(os.environ["USERPROFILE"] + "\\Documents\\PyRelator\\Images\\tmp\\6.png", self.master["path"] + "\\06 - Sobreposicao " + self.master["setup"] + " Inferior - " + self.master["paciente"] + ".png")
+        if(self.master["sup"] != "0" or self.master["diagnostico"] == True):
+            shutil.copy(os.environ["USERPROFILE"] + "\\Documents\\PyRelator\\Images\\tmp\\5.png", self.master["path"] + "\\05 - Sobreposicao " + self.master["setup"] + " Superior - " + self.master["paciente"] + ".png")
+        if(self.master["inf"] != "0" or self.master["diagnostico"] == True):
+            shutil.copy(os.environ["USERPROFILE"] + "\\Documents\\PyRelator\\Images\\tmp\\6.png", self.master["path"] + "\\06 - Sobreposicao " + self.master["setup"] + " Inferior - " + self.master["paciente"] + ".png")
 

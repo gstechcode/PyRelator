@@ -16,16 +16,15 @@
 <h1>Últimas Atualizações</h1>
 
 <p id="appatualizacao">
-  - Adição de pacote 2 PRO <br>
-  - Redução do tempo de ajuste posição oclusal superior/inferior <br>
-  - Correção Diagnostico(Fotos arcadas superior/inferior)<br>
+  - Alteração na Placa, para AL+ <br>
+  - Correção Bug diagnóstico <br>
 </p>
 
 <br>
 
 <h1>Versão atual:</h1>
 
-<h2 id="appversao">2.4</h2>
+<h2 id="appversao">2.5</h2>
 
 
 

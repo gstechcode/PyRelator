@@ -1,5 +1,6 @@
 import sys
 from cx_Freeze import setup, Executable
+import os
 
 
 # Dependencies are automatically detected, but it might need fine tuning.
@@ -16,5 +17,5 @@ setup(
     version="1.0",
     description="PyRelator",
     options={"build_exe": build_exe_options},
-    executables=[Executable("PyRelator.py", base=base, icon=r"C:\Users\gabriel.azevedo\Desktop\ProjectsGit\PyRelator\Images\Icon.ico")],
+    executables=[Executable("PyRelator.py", base=base, icon= os.getcwd() + r"\Images\Icon.ico")],
 )
