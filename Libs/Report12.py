@@ -158,9 +158,9 @@ class Report12:
         						i = i.replace("<break>","")
         						print(i)
         				elif(i == "<"):
-        						self.fonte= ImageFont.truetype("C:\\Program Files\\PyReport-1600X900\\build\\exe.win-amd64-3.9\\fonts\\Arial-Bold.ttf",self.tam)
+        						self.fonte= ImageFont.truetype(os.environ["USERPROFILE"] + "\\Documents\\PyRelator\\Fonts\\Arial-Bold.ttf",self.tam)
         				elif(i == ">"):
-        						self.fonte= ImageFont.truetype("C:\\Program Files\\PyReport-1600X900\\build\\exe.win-amd64-3.9\\fonts\\Arial.ttf",self.tam)
+        						self.fonte= ImageFont.truetype(os.environ["USERPROFILE"] + "\\Documents\\PyRelator\\Fonts\\Arial.ttf",self.tam)
         				else:
         						self.draw.text((cont, self.Y),i,fill= (0,0,0),font= self.fonte)
         						print(cont, cursor)
